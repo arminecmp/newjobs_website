@@ -1,0 +1,33 @@
+/* Features Section */
+.features {
+  width: 100%;
+  padding: 80px 50px;
+  text-align: center;
+  background: white; /* ✅ Light background to make content visible */
+  color: black; /* ✅ Ensure text is readable */
+}
+
+/* Features Grid */
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Individual Feature */
+.feature {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9); /* ✅ Slight transparency */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* ✅ Light shadow effect */
+}
+
+/* ✅ Purple Icons */
+.feature i {
+  font-size: 40px;
+  color: #642fcd; /* ✅ Purple color */
+  margin-bottom: 20px;
+}

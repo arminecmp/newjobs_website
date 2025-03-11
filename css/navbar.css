@@ -1,0 +1,46 @@
+/* Reset Default Margins & Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%; /* Ensure full width */
+  height: 80px; /* Navbar height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #1a0033, #642fcd);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Logo Styling */
+.logo img {
+  height: 150px; /* Smaller logo */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1; /* Slight hover effect */
+}

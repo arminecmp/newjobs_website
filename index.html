@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJobs.io</title>
+
+  <!-- Link CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Link JavaScript Files -->
+  <script defer src="js/script.js"></script>
+  <script defer src="js/animatedBlob.js"></script>
+
+  <!-- ✅ Load FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <div id="navbar"></div>
+
+  <!-- Hero Section -->
+  <div id="hero"></div>
+
+  <!-- Features Section -->
+  <div id="features"></div>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to Load HTML Components Dynamically -->
+  <script>
+    // Function to dynamically load components
+    function loadComponent(id, filePath) {
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to load ${filePath}: ${response.status} ${response.statusText}`);
+          }
+          return response.text();
+        })
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(error));
+    }
+
+    // Load the components
+    loadComponent("navbar", "components/navbar.html");
+    loadComponent("hero", "components/hero.html");
+    loadComponent("features", "components/features.html");
+    loadComponent("footer", "components/footer.html");
+  </script>
+
+</body>
+</html>
